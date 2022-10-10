@@ -1,14 +1,14 @@
 import { Button } from "react-bootstrap";
-const ItemProducto = () => {
+const ItemProducto = ({producto}) => {
 
 
   return (
     <tr>
-      <td>1</td>
-      <td>cafe</td>
-      <td>$300</td>
-      <td>url</td>
-      <td>dulce</td>
+      <td>{producto.id}</td>
+      <td>{producto.nombreProducto}</td>
+      <td>${producto.precio}</td>
+      <td>{producto.imagen}</td>
+      <td>{producto.categoria}</td>
       <td>
         <Button variant="warning">
           Editar
