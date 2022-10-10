@@ -7,3 +7,11 @@
 .mainSection{
     flex-grow: 1;
 }
+
+footer{
+    margin-top: auto;
+  }
+
+body{
+    min-height: 100vh;
+}  
