@@ -4,6 +4,7 @@ import { consultarAPI } from "../helpers/queries";
 import ItemProducto from "./producto/ItemProducto";
 import { useState } from "react";
 
+
 const Administrador = () => {
   const [productos, setProductos] = useState([]);
 
