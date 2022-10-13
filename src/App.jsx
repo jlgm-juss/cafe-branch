@@ -10,6 +10,7 @@ import './app.css'
 import Menu from './components/common/Menu'
 import Footer from './components/common/Footer';
 import Login from './components/views/Login';
+import Registro from './components/views/Registro';
 function App() {
   return (
    <BrowserRouter>
@@ -35,6 +36,7 @@ function App() {
         <Route exact
         path='/login'
         element={<Login></Login>}></Route>
+        <Route exact path='/registro' element= {<Registro></Registro>}></Route>
   <Route path='*' element={<Error404></Error404>} />
 </Routes>
 <Footer></Footer>
