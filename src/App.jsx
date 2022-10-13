@@ -9,6 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import './app.css'
 import Menu from './components/common/Menu'
 import Footer from './components/common/Footer';
+import Login from './components/views/Login';
 function App() {
   return (
    <BrowserRouter>
@@ -31,6 +32,9 @@ function App() {
           path="/detalle-producto"
           element={<DetalleProducto></DetalleProducto>}
         ></Route>
+        <Route exact
+        path='/login'
+        element={<Login></Login>}></Route>
   <Route path='*' element={<Error404></Error404>} />
 </Routes>
 <Footer></Footer>

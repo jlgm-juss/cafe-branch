@@ -16,6 +16,9 @@ const Menu = () => {
             <NavLink to="/administrador" className="nav-item nav-link">
               Administrar
             </NavLink>
+            <NavLink to="/login" className="nav-item nav-link">
+              Login
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>
