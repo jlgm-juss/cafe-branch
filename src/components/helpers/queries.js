@@ -38,3 +38,15 @@ console.log(error);
      }
 }
 
+export const borrarProductoAPI = async(id)=>{
+     try {
+const respuesta = await fetch(`${URL}/${id}`,{
+     method: "DELETE"
+     
+});
+return respuesta;
+     }catch(error){
+console.log(error);
+     }
+}
+

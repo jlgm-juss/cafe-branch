@@ -22,13 +22,6 @@
       "id": 3
     },
     {
-      "nombreProducto": "café",
-      "precio": 300,
-      "categoria": "bebida caliente",
-      "imagen": "https://www.pexels.com/es-es/foto/primer-plano-de-taza-de-cafe-en-mesa-312418/",
-      "id": 5
-    },
-    {
       "nombreProducto": "Cheese cake",
       "precio": "750",
       "imagen": "https://c8.alamy.com/compes/cpncc5/el-capitan-america-el-primer-vengador-cpncc5.jpg",
@@ -48,6 +41,13 @@
       "imagen": "https://c8.alamy.com/compes/cpncc5/el-capitan-america-el-primer-vengador-cpncc5.jpg",
       "categoria": "salado",
       "id": 9
+    },
+    {
+      "nombreProducto": "Licuado",
+      "precio": "430",
+      "imagen": "https://fondosmil.com/fondo/1478.jpg",
+      "categoria": "bebida fria",
+      "id": 10
     }
   ]
 }
