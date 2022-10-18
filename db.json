@@ -29,13 +29,6 @@
       "id": 5
     },
     {
-      "nombreProducto": "café de prueba",
-      "precio": 300,
-      "categoria": "bebida caliente",
-      "imagen": "https://www.pexels.com/es-es/foto/primer-plano-de-taza-de-cafe-en-mesa-312418/",
-      "id": 6
-    },
-    {
       "nombreProducto": "Cheese cake",
       "precio": "750",
       "imagen": "https://c8.alamy.com/compes/cpncc5/el-capitan-america-el-primer-vengador-cpncc5.jpg",
