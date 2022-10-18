@@ -28,9 +28,8 @@ const respuesta = await fetch(URL,{
           "Content-Type": "application/json"
      },
      body: JSON.stringify(producto)
-
-
 });
+return respuesta;
 const listaProductos = await respuesta.json();
 //console.log(listaProductos)
 return listaProductos
