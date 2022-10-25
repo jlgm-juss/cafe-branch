@@ -1,10 +1,10 @@
 {
   "productos": [
     {
-      "nombreProducto": "café",
-      "precio": 300,
-      "categoria": "bebida caliente",
+      "nombreProducto": "café con leche",
+      "precio": "350",
       "imagen": "https://www.pexels.com/es-es/foto/primer-plano-de-taza-de-cafe-en-mesa-312418/",
+      "categoria": "bebida caliente",
       "id": 1
     },
     {
@@ -15,8 +15,8 @@
       "id": 2
     },
     {
-      "nombreProducto": "licuado",
-      "precio": 350,
+      "nombreProducto": "licuado v2",
+      "precio": 250,
       "categoria": "bebida fria",
       "imagen": "https://media.istockphoto.com/photos/healthy-appetizing-red-smoothie-dessert-in-glasses-picture-id1081369140?b=1&k=20&m=1081369140&s=612x612&w=0&h=Xn-CuSgDc9-HO-10sRV3ds8ALmwt82HbLAyaGLWE5I8=",
       "id": 3
@@ -50,7 +50,5 @@
       "id": 10
     }
   ],
-  "usuarios": [
-    
-  ]
+  "usuarios": []
 }
