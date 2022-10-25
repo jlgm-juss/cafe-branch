@@ -1,23 +1,55 @@
+
 import { Form, Button } from "react-bootstrap";
 import {useForm} from "react-hook-form";
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
+import { obtenerProductoAPI } from "../../helpers/queries";
+import Swal from "sweetalert2";
 
 const EditarProducto = () => {
+
+  
+
+
 const {
   register,
   handleSubmit,
   formState: {errors},
+  setValue
 } = useForm({defaultValues: {
-  editarProducto: '',
+  nombreProducto: '',
   precio: 1,
   imagen: "",
   categoria: '',
 }
 });
 
-const onSubmit = (editar)=>{
-  console.log(editar);
-  console.log('Desde nuestra funcion editar')
-}
+
+const {id} = useParams();
+  
+  useEffect(()=>{
+obtenerProductoAPI(id).then((respuesta)=>{
+  if (respuesta.status === 200){
+    setValue('nombreProducto', respuesta.dato.nombreProducto)
+    setValue('precio', respuesta.dato.precio)
+    setValue('imagen', respuesta.dato.imagen)
+    setValue('categoria', respuesta.dato.categoria)
+
+
+
+    //cargar los datos de la respuesta en formulario 
+    console.log(respuesta)
+  }else{
+    Swal.fire('Ocurrio un error', 'Intente este paso en unos minutos', 'error')
+  }
+})
+  },[])
+
+const onSubmit = (producto)=>{
+  console.log(producto);
+// aquí quiero enviar la petición a la API de los datos para actualizar el producto
+  
+} 
 
   return (
     <section className="container mainSection">
@@ -27,7 +59,7 @@ const onSubmit = (editar)=>{
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group className="mb-3" controlId="formNombreProdcuto">
           <Form.Label>Nombre producto*</Form.Label>
-          <Form.Control type="text" placeholder="Ej: Cafe" {...register('editarProducto',{
+          <Form.Control type="text" placeholder="Ej: Cafe" {...register('nombreProducto',{
             required: 'Este dato es obligatorio',
             minLength: {
               value: 2,
@@ -38,7 +70,7 @@ const onSubmit = (editar)=>{
               message: "Debe ingresar como máximo 50 caracteres",
             },
           })} />
-          <Form.Text className="text-danger" >{errors.editarProducto?.message}</Form.Text>
+          <Form.Text className="text-danger" >{errors.nombreProducto?.message}</Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formPrecio">
           <Form.Label>Precio*</Form.Label>
@@ -79,8 +111,8 @@ const onSubmit = (editar)=>{
             })}
           >
             <option value="">Seleccione una opcion</option>
-            <option value="bebida-caliente">Bebida caliente</option>
-            <option value="bebida-fria">Bebida fria</option>
+            <option value="bebida caliente">Bebida caliente</option>
+            <option value="bebida fria">Bebida fria</option>
             <option value="dulce">Dulce</option>
             <option value="salado">Salado</option>
           </Form.Select>

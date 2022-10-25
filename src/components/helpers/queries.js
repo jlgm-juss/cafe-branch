@@ -2,6 +2,8 @@
 
 const URL = 'http://localhost:3004/productos';
 
+const userURL =  'http://localhost:3004/usuarios';
+
 // tipos de peticiones
 //petición GET que trae todos los productos o un producto
 // petición POST, crear un producto, login
@@ -45,6 +47,20 @@ const respuesta = await fetch(`${URL}/${id}`,{
      
 });
 return respuesta;
+     }catch(error){
+console.log(error);
+     }
+}
+
+export const obtenerProductoAPI = async(id)=>{
+     try {
+const respuesta = await fetch(URL+ '/'+ id);
+const productoBuscado = {
+     dato: await respuesta.json(),
+     status: respuesta.status
+}
+
+return productoBuscado;
      }catch(error){
 console.log(error);
      }
